@@ -1,0 +1,46 @@
+<div class="content-inside">
+  <nav class="navbar navbar-dark bg-dark justify-content-between">
+    <a class="navbar-brand"><img src="assets\img-mockup-design\logo.png" class="img-navbar"></a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" name="filterPost" type="search" placeholder="Buscar Heroe" [(ngModel)]="filterPost" aria-label="Search">
+    </form>
+  </nav>
+
+  <div class="container mt-3">
+    <div class="row ">
+      <div class="col-lg-8">
+        <img src="assets\img-mockup-design\characters.png" ><a class="img-characters">
+          Héroes
+        </a>
+        <div class="card-columns">
+        
+          <div class="card" *ngFor="let heroe of heroes | filter:filterPost">
+            <img [src]="heroe.imagen" class="card-img-top ">
+            <div class="card-body">
+              <h3 class="card-title text-light">{{heroe.nombre}}</h3>
+              <p class="card-text text-light">{{heroe.descripcion}}</p>
+              <p class="card-text">
+                <span class="text-muted">
+                  Participación en comics:
+                </span>
+              </p>
+              <li class="text-info alert-link " *ngFor="let comic of heroe.comics"><a style="cursor:pointer;text-decoration:underline" (click) ="openModal(comic)"  >{{comic.nombre}}</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <img src="assets\img-mockup-design\btn-favourites-primary.png" class="icon-favorite"><a class="font-title-favorite">
+          Mis comics favoritos
+        </a>
+        <div class="card bg-dark mt-2" *ngFor="let comic of comics"  style="cursor: pointer;">
+          <img [src]="comic.imagen" (click) ="openModal(comic)" class="card-img-top">
+          <div class="card-subtitle ml-4">
+            <h3 class="card-title text-light mt-3">{{comic.nombre}} <a><img src="assets\img-mockup-design\btn-delete.png" (click)="deleteComic(comic)" style="width: 30px; cursor: pointer;"></a></h3> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

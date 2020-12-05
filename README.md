@@ -1,20 +1,30 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# MarvelApiChallenge
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Bootstrap
+Angular Material
+Localstorage
+Design Responsive
+preprocesador Sass
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Estructura del proyecto:
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Api Mock: heroes
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Models: 2
+    comic, heroes
+
+Pipe: Filter Search
+
+Component: 2 
+    appcomponent,modalComponent
+
+
+Funcionalidad:
+
+1. Permite realizar busqueda de heroes.
+2. Participación en comics permite desplegar modal para ver detalle.
+3. modal guarda comic favorito(validación comic existente).
+4. seccion de comics favoritos permite ver detalle y eliminar comic.
+
+Autor ✒️ Santiago Valencia - Desarrollador Web ❤️
